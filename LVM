@@ -25,6 +25,49 @@ Now in order to make the mount persistent we have to add the details in /etc/fst
         <lv_name> /mountpoint <fstype eg:ext4> defaults 0 0
     Using UUID
         Find UUID using >> blkid
-        <UUID> /mountpoint <fstype eg:ext4> defaults 0 0  
+        <UUID="UUID_value"> /mountpoint <fstype eg:ext4> defaults 0 0  
 To mount all in /etc/fstab >> mount -a
 Now verify using df -h
+We can use df -hT to get the filesystem associated with that logical volume.
+
+
+
+============================LVM Extend=================================
+Now if we have to extend a logical volume we first have to check is the required value present in the volume group
+    If the space is available then
+        lvextend -L +<disk_space> -n <lv_name> <vgname>
+    If the required disk space is not available then add  anew physical volume to the volumegroup
+        If there is no physical volume available then Follow line 5 to line 14 to create physical volumes (from fdisk  to pvcreate)
+        Now extend the volumegroup with newly created physical volume using >> vgextend <vgname> <pvname>
+        Now extend the logical volume using lvextend -L +<disk_space> -n <lv_name> <vgname>
+        Even though the LV is extended this change wont reflect in df -hT. Hence we have to resize the File system
+        If filesystem is XFS
+            run command: xfs_growfs <lv_name>
+        If filesystem is Ext?
+            run command: resize2fs <lv_name>
+        Now the extended volume should reflect while using df -hT
+
+============================LVM Extend Completed=================================
+
+
+============================LVM Reduce=================================
+For EXT fs:
+
+First unmount the logical volume >> umount /mountpoint
+Perform fsck on the logical volume >> e2fsck <lv_name>
+Reduce the size of filesystem to desired space >> resize2fs <lv_name> <disk_space>
+Now reduce the size of logical volume >> lvreduce -L <disk_space> -n <lv_name>
+Now we can do fsck but it is not a compulsary step
+Now mount the logical volume to the mountpoint
+
+For XFS fs:
+
+For install xfsdump >> yum install xfsdump -y
+Now Backup The Data >> xfsdump -f /mountpoint   /backupdir
+Now unmount the partition
+Now reduce the logical volume >> lvreduce -L <disk_space> -n <lv_name>
+Now again format the partition with xfs >> mkfs.xfs <lv_name>
+Now mount the logical volume to mountpoint >> mount <lv_name> /mountpoint
+Now restore the backup >> xfsrestore -f /backupdir /mountpoint
+
+============================LVM Reduce Completed=================================
