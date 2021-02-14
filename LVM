@@ -12,8 +12,11 @@ Usage of fdisk
       w >> to save
 Now the disk has been partitioned
 Now create a physical volume for all the partions which needs to be added in volumegroup >> pvcreate <partion name>
-Now create volume group which combines the physical volumes >> vgcreate <vgname> <pvname> . . .
+Now create volume group which combines the physical volumes
+    If physical extent is default >> vgcreate <vgname> <pvname> . . .
+    If physical extent is defained as X >> vgcreate -s XM <vgname> <pvname> . . .
 Now create logical volume with required amount of disk space >> lvcreate -L <disk_space> -n <lv_name> <vgname>
+                                                                lvcreate -l <No_of_PE> -n <lv_name> <vgname>                   Here the total size="No_of_PE" x PE
 Now create filesystem in the logical volume before mounting it
   For xfs filesystem >> mkfs.xfs <lv_name>
   For ext2,ext3,ext4 filesystem >> mkfs.ext4 <lv_name>
@@ -71,3 +74,14 @@ Now mount the logical volume to mountpoint >> mount <lv_name> /mountpoint
 Now restore the backup >> xfsrestore -f /backupdir /mountpoint
 
 ============================LVM Reduce Completed=================================
+
+
+
+============================LVM Delete=================================
+Unmount the logical volume
+Disable Logical volume    lvchange -an <lv_name>
+Remove Logical volume     lvremove <lv_name>
+Disable Volume group      vgchange -an <vgname>
+Remove Volume group       vgremove <vgname>
+Remove Physical volume    pvremove <pvname1> <pvname2> ..
+============================LVM Delete Completed=================================
