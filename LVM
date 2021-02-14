@@ -1,0 +1,30 @@
+Practised using AWS [EC2 + EBS]
+Had to install LVM in EC2 instance using >> yum install lvm2
+Created a new EBS volume
+Partioned it into 3 partitions using fdisk >> we can use "fdisk -l" and lsblk for more details info about available disks
+Usage of fdisk
+  fdisk /dev/xvdf3
+      n >> new
+      p >> primary
+      .
+      .
+      t >> to change the partition type to LVM >> Hex is 8e
+      w >> to save
+Now the disk has been partitioned
+Now create a physical volume for all the partions which needs to be added in volumegroup >> pvcreate <partion name>
+Now create volume group which combines the physical volumes >> vgcreate <vgname> <pvname> . . .
+Now create logical volume with required amount of disk space >> lvcreate -L <disk_space> -n <lv_name> <vgname>
+Now create filesystem in the logical volume before mounting it
+  For xfs filesystem >> mkfs.xfs <lv_name>
+  For ext2,ext3,ext4 filesystem >> mkfs.ext4 <lv_name>
+Now as the filesystem is created, we have to create the directory where we have to mount the volume >> mkdir /mountpoint
+Now mount the volume >> mount <lv_name> /mountpoint
+Now in order to make the mount persistent we have to add the details in /etc/fstab
+  vi /etc/fstab
+    Using lv_name 
+        <lv_name> /mountpoint <fstype eg:ext4> defaults 0 0
+    Using UUID
+        Find UUID using >> blkid
+        <UUID> /mountpoint <fstype eg:ext4> defaults 0 0  
+To mount all in /etc/fstab >> mount -a
+Now verify using df -h
