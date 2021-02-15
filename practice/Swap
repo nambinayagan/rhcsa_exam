@@ -1,0 +1,11 @@
+Practised using AWS [EC2 + EBS]
+
+We have to create a partition on available disk device >> fdisk /dev/xvdf
+Make sure that the type is saved as Swap >> Hex code is 82
+Once the partition is created initiate the device as Swap >> mkswap /dev/xvdf4
+Now start the swap using cmd >> swapon /dev/xvdf4
+You can remove the device from swap >> swapoff /dev/xvdf4
+
+
+We can have multiple devices as swap but we have to set priority in /etc/fstab where we generally put "defaults" we can add "pri=10". Higher the number higer the priority.
+Default has a priority of "-2". Hence it will be considered atlast.
