@@ -1,0 +1,50 @@
+Using FIND command
+Syntax: find <location> <options>.. <-exec=>
+ ==============To list files which are matching criteria=======================
+
+find .          	        #to list all file and directories including subdirectories in current location
+find <location>       		  #to list all files and directories inside the specified directory
+find . -type f		          #to list all files in current location
+find . -type d		          #to list all directories and subdirectories in current location
+find . -type d -maxdepth 1	  #to list all directories and not the subdirectories
+find . -name "nambi"	          #to list all files with exact same name
+find . -iname "nambi"	        	#to list all files with exact same name but case insensitive
+find . -iname "*nambi*"	        	#to list all files having nambi in their name eg: nambi.txt, rnambi.jpg
+find . type -f -user "nambi"		#to list all files onwned by user nambi
+fine . -empty				#to list all empty files
+
+		According to Time
+
+find . -type f -mmin -10		#list all files modified in last 10minutes
+find . -type f -mmin +10                #list all files modified in before last 10minutes
+find . -type f -mmin +5 -mmin -10	#list all files which were modified before 5 mins but in last 10mins
+find . -type file -mtime -10		#list all files modified in last 10 days
+find . -type file -mtime +10		#list all files modified before 10 days
+					#mmin >> Modified time in minutes
+					#mtime >> Modified time in days
+					#cmin >> Change time in minutes
+					#ctime >> Change time in days
+					#amin >> Access time in minutes
+					#atime >> Access time in days
+
+
+		According to Size
+
+fine . -size +5M			#list all files having size higher than 5MB
+find . -size -5M			#list all files having size lower than 5MB
+
+		According to permission of files
+
+find . -perm 777			#list all files and folders having permission 777
+
+
+
+=============================To take acctions on files matching criteria===============
+
+
+find . -type d -exec chmod 755 {} \;			#to change the permission of all directoires to 755
+find . -type f -exec chmod 644 {} \;			#to change the permission of all files to 644
+find . -user nambi -exec chown nambi1: {} \;		#to change owner of a files from nambi to nambi1
+find . -empty -exec rm -f {} \;				#to delete all empty files
+
+
