@@ -1,0 +1,62 @@
+Tar usage
+
+Most used commands
+
+tar -cvf archive.tar <files>..
+
+tar -cvzf archive.tar.gz <file1> <file2>...					#Creates compressed and gunzip file of input files
+c > create
+v > verbose
+z > gunzip
+f > file
+
+
+tar -cvjf archive.tar.bz2 <file1> <file2>...					#Creates compressed and bzip file of input files
+
+j > bzip2 
+
+
+tar -tvf archive.tar  							       # List all files in archive.tar verbosely.
+tar -xf archive.tar 							       # Extract all files from archive.tar.
+
+
+tar • Archive files; does not handle compression
+» -c • Create new archive
+» -t • List contents of archive
+» -x • Extract files from archive
+» -z • Compress or uncompress file in gzip
+» -v • Verbose
+» -j • Compress or uncompress file in bzip2
+» -f • Read archive from or to file
+
+» Examples
+- tar -cf helloworld.tar hello world • Archive hello and world files into helloworld.tar archive
+- tar -tvf helloworld.tar • List all files in helloworld.tar archive
+- tar -xf helloworld.tar • Extract files in archive
+- tar -czvf helloworld.tar.gz hello world • Archive and compress (using gzip) hello and world files into helloworld.tar.gz archive
+- tar -zxvf helloworld.tar.gz • Uncompress (in gzip) and extract files from archive
+
+
+• star • Archiving utility generally used to archive large sets of data; includes pattern-matching and searching
+» -c • Create archive file
+» -v • Verbose output
+» -n • Show results of running command, without executing the actions
+» -t • List contents of file
+» -x • Extract file
+» --diff • Show difference between files
+» -C • Change to specified directory
+» -f • Specify file name
+
+» Examples”
+- star -c f=archive.tar file1 file2 • Archive file1 and file2 into archive.tar archive
+- star -c -C /home/user/ -f=archive.tar file1 file2 • Move to /home/user and archive file1 and file2 from that directory into archive.tar
+- star -x -f=archive.tar • Extract archive.tar
+- star -t -f=archive.tar • List contents of archive.tar
+• gzip • Compression utility used to reduce file sized; files are unavailable until unpacked; generally used with tar
+» -d • Decompress files
+» -l • List compression information
+
+» Examples:
+- gzip file1 • Compress file1 into file1.gz
+- gzip -d file1.gz • Unpack file1
+- gunzip filename • Unpack filename

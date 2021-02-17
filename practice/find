@@ -46,5 +46,5 @@ find . -type d -exec chmod 755 {} \;			#to change the permission of all directoi
 find . -type f -exec chmod 644 {} \;			#to change the permission of all files to 644
 find . -user nambi -exec chown nambi1: {} \;		#to change owner of a files from nambi to nambi1
 find . -empty -exec rm -f {} \;				#to delete all empty files
-
+find . -user nambi -exec cp -rpf {} <location> \;	#to copy all the files owned by user nambi to the required locations
 
