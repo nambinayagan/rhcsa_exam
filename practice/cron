@@ -8,6 +8,8 @@ atrm					#To delete jobs depending on Job ID.
 batch					#executes commands when system  load  levels  permit
 
 
+
+
 Cron created files/directories
 ===========
 /etc/cron.deny				#Add name of user for which cron functionality is disabled
