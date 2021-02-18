@@ -1,0 +1,22 @@
+Cron Scheduling in RHEL8
+
+Cron created files/directories
+===========
+/etc/cron.deny				#Add name of user for which cron functionality is disabled
+/etc/crontab				#Has format of cron (Minute:Hour:Day:Month:Week:User:Command)
+					eg: Cron to run every 5 minutes: */5 * * * * nambi echo hello >> hellofile.txt
+
+/etc/cron.d
+/etc/cron.daily
+/etc/cron.hourly
+/etc/cron.monthly
+/etc/cron.weekly
+
+==========
+
+
+crontab -l								#To list the active crons
+crontab -e								#To create a new cron
+
+
+
