@@ -2,6 +2,10 @@ Cron Scheduling in RHEL8
 
 at command
 
+at					#To add jobs which needs to be run once
+atq					#To list user's pending job
+atrm					#To delete jobs depending on Job ID.
+batch					#executes commands when system  load  levels  permit
 
 
 Cron created files/directories
