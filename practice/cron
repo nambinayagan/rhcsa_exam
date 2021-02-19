@@ -8,6 +8,7 @@ atrm					#To delete jobs depending on Job ID.
 batch					#executes commands when system  load  levels  permit
 
 
+<<<<<<< HEAD
 crontab command
 crontab -l                                                              #To list the active crons
 crontab -e                                                              #To create a new cron
@@ -17,6 +18,11 @@ Running  cron jobs can be allowed or disallowed for different users.  For this p
 
 
 Cron related files/directories
+=======
+
+
+Cron created files/directories
+>>>>>>> d9bf9544d7f93a29ff52838dff6d1ad92ce2c416
 ===========
 /etc/cron.deny				#Add name of user for which cron functionality is disabled
 /etc/crontab				#We can schedule recurring task in this file and in this we have to add details just like crontab -e
@@ -28,10 +34,10 @@ Cron related files/directories
 
 
 These are directories and we can add scripts inside them so that the script gets executed daily/hourly/weekly/monthly
-/etc/cron.daily
-/etc/cron.hourly
-/etc/cron.monthly
-/etc/cron.weekly
+/etc/cron.daily  >> /etc/cron.daily/<myscript.sh>	#here myscript.sh will run daily once
+/etc/cron.hourly >> /etc/cron.hourly/<myscript.sh>	#here myscript.sh will run hourly once
+/etc/cron.monthly >> /etc/cron.monthly/<myscript.sh>	#here myscript.sh will run monthly once
+/etc/cron.weekly >> /etc/cron.weekly/<myscript.sh>	#here myscript.sh will run weekly once
 
 ==========
 
