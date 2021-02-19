@@ -8,15 +8,26 @@ atrm					#To delete jobs depending on Job ID.
 batch					#executes commands when system  load  levels  permit
 
 
-Cron created files/directories
+crontab command
+crontab -l                                                              #To list the active crons
+crontab -e                                                              #To create a new cron
+
+
+Running  cron jobs can be allowed or disallowed for different users.  For this purpose, use the cron.allow and cron.deny files.  If the cron.allow file exists, a user must be listed in it to be allowed to use cron If the cron.allow file does not exist but the cron.deny file does exist, then a user must not be listed in the cron.deny file in order to use cron.  If neither of these files exists, only the super user is allowed to use cron.
+
+
+Cron related files/directories
 ===========
 /etc/cron.deny				#Add name of user for which cron functionality is disabled
-/etc/crontab				#Has format of cron (Minute:Hour:Day:Month:Week:User:Command)
+/etc/crontab				#We can schedule recurring task in this file and in this we have to add details just like crontab -e
+					#Has format of cron (Minute:Hour:Day:Month:Week:User:Command)
 					eg: Cron to run every 5 minutes: */5 * * * * nambi echo hello >> hellofile.txt
+
+/etc/cron.d/<anyfilename>		#Here we can add details in <anyfilename> just like /etc/crontab file 
+					But one advantage of adding file under cron.d instead of /etc/crontab is that when we update crontab the contents inside /etc/crontab is wiped but the data inside /etc/cron.d/<anyfilename> is retained
 
 
 These are directories and we can add scripts inside them so that the script gets executed daily/hourly/weekly/monthly
-/etc/cron.d
 /etc/cron.daily
 /etc/cron.hourly
 /etc/cron.monthly
@@ -25,8 +36,6 @@ These are directories and we can add scripts inside them so that the script gets
 ==========
 
 
-crontab -l								#To list the active crons
-crontab -e								#To create a new cron
 
 
 
