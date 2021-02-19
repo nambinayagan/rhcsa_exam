@@ -1,6 +1,6 @@
 Cron Scheduling in RHEL8
 
-at command
+#############  at command   #####################
 
 at					#To add jobs which needs to be run once
 atq					#To list user's pending job
@@ -8,17 +8,12 @@ atrm					#To delete jobs depending on Job ID.
 batch					#executes commands when system  load  levels  permit
 
 
-crontab command
+####################  crontab command   #################3
 crontab -l                                                              #To list the active crons
 crontab -e                                                              #To create a new cron
 
 
 Running  cron jobs can be allowed or disallowed for different users.  For this purpose, use the cron.allow and cron.deny files.  If the cron.allow file exists, a user must be listed in it to be allowed to use cron If the cron.allow file does not exist but the cron.deny file does exist, then a user must not be listed in the cron.deny file in order to use cron.  If neither of these files exists, only the super user is allowed to use cron.
-
-
-Cron related files/directories
-=======
-
 
 Cron created files/directories
 
