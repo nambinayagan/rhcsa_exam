@@ -85,3 +85,12 @@ Disable Volume group      vgchange -an <vgname>
 Remove Volume group       vgremove <vgname>
 Remove Physical volume    pvremove <pvname1> <pvname2> ..
 ============================LVM Delete Completed=================================
+
+
+============================ To Delete Partition =================================
+fdisk /dev/sdf
+d
+1,2,3,4
+w
+============================ To Delete Partition Completed =================================
+
