@@ -94,3 +94,34 @@ d
 w
 ============================ To Delete Partition Completed =================================
 
+
+============================ To Create Partition using PARTED cmd =================================
+
+Command: parted
+To create patritioning type: MBR or GPT [MBR partitioning can be done using fdisk and paretd whereas GPT can be done only using parted]
+
+parted /dev/xvdf print					#To list the partitions for the disk
+parted /dev/xvdf mklabel msdos/gpt			#To create partition type
+
+parted /dev/xvdf
+(parted) mkpart
+Partition type?  primary/extended? primary
+File system type?  [ext2]? ext4
+Start? 300MB
+End? 500MB
+(parted) print
+Model: Xen Virtual Block Device (xvd)
+Disk /dev/xvdf: 5369MB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+Disk Flags:
+
+Number  Start   End    Size   Type     File system  Flags
+ 1      1049kB  300MB  299MB  primary
+ 2      300MB   500MB  200MB  primary  ext4         lba
+
+(parted)quit
+
+============================ To Create Partition using PARTED cmd completed =================================
+
+
