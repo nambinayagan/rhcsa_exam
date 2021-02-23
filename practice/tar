@@ -47,7 +47,7 @@ tar • Archive files; does not handle compression
 » -C • Change to specified directory
 » -f • Specify file name
 
-» Examples”
+» Examples
 - star -c f=archive.tar file1 file2 • Archive file1 and file2 into archive.tar archive
 - star -c -C /home/user/ -f=archive.tar file1 file2 • Move to /home/user and archive file1 and file2 from that directory into archive.tar
 - star -x -f=archive.tar • Extract archive.tar
