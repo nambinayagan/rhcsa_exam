@@ -26,6 +26,7 @@ Syntax:
 3)FIELD based
 
 Syntax:
+	cut -f 1				#If there is no delimeter given then by default delimeter is taken as "tab"
 	cut -d ":" -f 1				#The fields will be seperated on basis of "colon :" and displays first field
 	cut -d ":" -f 1,2
 	cut -d ":" -f -3			#The fields will be seperated on basis of "colon :" and displays all fields before third
