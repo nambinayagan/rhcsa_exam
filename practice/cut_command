@@ -1,8 +1,8 @@
 
 CUT command can be differentiated in  three ways
-1)BYTE based
-2)COLUMN based
-3)DELIMETER based
+1)BYTE based		cut -b
+2)COLUMN based		cut -c
+3)DELIMETER based	cut -d
 
 
 1)BYTE based
