@@ -1,0 +1,23 @@
+
+CUT command can be differentiated in  three ways
+1)BYTE based
+2)COLUMN based
+3)DELIMETER based
+
+
+1)BYTE based
+
+Syntax:
+	cut -b 1				#First byte
+	cut -b 1,2				#First and Second byte
+	cut -b 1-				#Display all bytes after first
+	cut -b -3				#Display all bytes before third
+
+
+2)COLUMN based
+
+Syntax:
+	cut -c 1				#First column
+	cut -c 1,2				#First and second column
+	cut -c 1-				#Display all columns after first
+	cut -c -3				#Display all columns before third
