@@ -1,7 +1,7 @@
 # This is my RHCSA practice folder
 ___
 
-##Cut Command in Linux Cheatsheet`
+## Cut Command in Linux Cheatsheet`
 
 CUT command can be differentiated in  three ways
 -BYTE based            cut -b
@@ -9,6 +9,7 @@ CUT command can be differentiated in  three ways
 -COLUMN based          cut -c
 
 -DELIMETER based       cut -d
+
 
 
 1)BYTE based
