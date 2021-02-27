@@ -55,3 +55,5 @@ _Syntax:_
         cut -d ":" -f -3                        #The fields will be seperated on basis of "colon :" and displays all fields before third
 
         cut -d ":" -f 1 -s                      #In above cases if any lines which does not have that delimter thn it is by default displayed. However if we used -s then this can be avoided
+
+[Go to TOP](https://github.com/nambinayagan/rhcsa_exam/tree/main/practice#cut-command-in-linux-cheatsheet "Cut Command")
