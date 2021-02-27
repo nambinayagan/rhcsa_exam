@@ -1,21 +1,21 @@
+
 # This is my RHCSA practice folder
-___
 
-## Cut Command in Linux Cheatsheet`
+### Cut Command in Linux Cheatsheet
 
-CUT command can be differentiated in  three ways
--BYTE based            cut -b
+CUT command can be differentiated in three ways
 
--COLUMN based          cut -c
+- **BYTE** based            cut -b "byte"
 
--DELIMETER based       cut -d
+- **COLUMN** based          cut -c "column"
+
+- **DELIMETER** based       cut -d "delimeter" -f "field"
 
 
 
-1)BYTE based
+#### 1)BYTE based
 
-Syntax:
-`Display First byte`
+_Syntax:_
 
         cut -b 1                                #First byte
 
@@ -26,10 +26,10 @@ Syntax:
         cut -b -3                               #Display all bytes before third
 
 
-2)COLUMN based
+### 2)COLUMN based
 
 
-Syntax:
+_Syntax:_
 
         cut -c 1                                #First column
 
@@ -41,10 +41,10 @@ Syntax:
 
 
 
-3)FIELD based
+### 3)FIELD based
 
 
-Syntax:
+_Syntax:_
 
         cut -f 1                                #If there is no delimeter given then by default delimeter is taken as "tab"
 
