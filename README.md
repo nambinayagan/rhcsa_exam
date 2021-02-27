@@ -1,15 +1,18 @@
 
-# This is my RHCSA practice folder
+# Basic Linux Commands
+
+[Cut Command in Linux Cheatsheet](https://github.com/nambinayagan/rhcsa_exam#cut-command-in-linux-cheatsheet "Cut Command")
+
 
 ### Cut Command in Linux Cheatsheet
 
 CUT command can be differentiated in three ways
 
-- **BYTE** based            cut -b "byte"
+- **BYTE** based   `         cut -b "byte"`
 
-- **COLUMN** based          cut -c "column"
+- **COLUMN** based          `cut -c "column"`
 
-- **DELIMETER** based       cut -d "delimeter" -f "field"
+- **DELIMETER** based       `cut -d "delimeter" -f "field"`
 
 
 
