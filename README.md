@@ -16,7 +16,7 @@ CUT command can be differentiated in three ways
 
 
 
-#### 1)BYTE based
+### 1)BYTE based
 
 _Syntax:_
 
