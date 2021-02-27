@@ -1,18 +1,20 @@
 # This is my RHCSA practice folder
 ___
-___
 
-`Cut Command in Linux Cheatsheet`
+##Cut Command in Linux Cheatsheet`
 
 CUT command can be differentiated in  three ways
 -BYTE based            cut -b
+
 -COLUMN based          cut -c
+
 -DELIMETER based       cut -d
 
 
 1)BYTE based
 
 Syntax:
+`Display First byte`
         cut -b 1                                #First byte
         cut -b 1,2                              #First and Second byte
         cut -b 1-                               #Display all bytes after first
