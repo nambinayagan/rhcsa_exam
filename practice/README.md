@@ -3,19 +3,19 @@ ___
 
 ## Cut Command in Linux Cheatsheet`
 
-CUT command can be differentiated in  three ways
--BYTE based            cut -b
+CUT command can be differentiated in three ways
 
--COLUMN based          cut -c
+- **BYTE** based            cut -b
 
--DELIMETER based       cut -d
+- **COLUMN** based          cut -c
+
+- **DELIMETER** based       cut -d
 
 
 
-1)BYTE based
+### 1)BYTE based
 
 Syntax:
-`Display First byte`
 
         cut -b 1                                #First byte
 
