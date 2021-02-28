@@ -8,7 +8,7 @@
 
 CUT command can be differentiated in three ways
 
-- Based on **BYTE** position   `         cut -b "byte"`
+- Based on [**BYTE**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#1byte-position) position   `         cut -b "byte"`
 
 - Based on **COLUMN** position          `cut -c "column"`
 
