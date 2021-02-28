@@ -8,15 +8,15 @@
 
 CUT command can be differentiated in three ways
 
-- **BYTE** based   `         cut -b "byte"`
+- Based on **BYTE** position   `         cut -b "byte"`
 
-- **COLUMN** based          `cut -c "column"`
+- Based on **COLUMN** position          `cut -c "column"`
 
-- **DELIMETER** based       `cut -d "delimeter" -f "field"`
+- Based on **DELIMETER**        `cut -d "delimeter" -f "field"`
 
 
 
-### 1)BYTE based
+### 1)BYTE position
 
 _Syntax:_
 
@@ -29,7 +29,7 @@ _Syntax:_
         cut -b -3                               #Display all bytes before third
 
 
-### 2)COLUMN based
+### 2)COLUMN position
 
 
 _Syntax:_
