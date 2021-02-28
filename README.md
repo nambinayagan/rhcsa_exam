@@ -12,7 +12,7 @@ CUT command can be differentiated in three ways
 
 - Based on [**COLUMN**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#2column-position) position          `cut -c "column"`
 
-- Based on [**DELIMETER**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#3field-based)        `cut -d "delimeter" -f "field"`
+- Based on [**FIELDS & DELIMETER**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#3field-based)        `cut -d "delimeter" -f "field"`
 
 
 
