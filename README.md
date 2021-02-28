@@ -10,9 +10,9 @@ CUT command can be differentiated in three ways
 
 - Based on [**BYTE**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#1byte-position) position   `         cut -b "byte"`
 
-- Based on **COLUMN** position          `cut -c "column"`
+- Based on [**COLUMN**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#2column-position) position          `cut -c "column"`
 
-- Based on **DELIMETER**        `cut -d "delimeter" -f "field"`
+- Based on [**DELIMETER**](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#3field-based)        `cut -d "delimeter" -f "field"`
 
 
 
@@ -59,4 +59,4 @@ _Syntax:_
 
         cut -d ":" -f 1 -s                      #In above cases if any lines which does not have that delimter thn it is by default displayed. However if we used -s then this can be avoided
 
-[Go to TOP](https://github.com/nambinayagan/rhcsa_exam/tree/main/practice#cut-command-in-linux-cheatsheet "Cut Command")
+[Go to TOP](https://github.com/nambinayagan/rhcsa_exam#cut-command-in-linux-cheatsheet "Cut Command")
