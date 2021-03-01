@@ -7,20 +7,17 @@
  Grep is a filter command, it is used to search a string in a given file.
  
  
- Simple grep command syntax:
+ **Syntax:**
  
-	 - grep [options] “string/pattern” file/files
+- grep [options] “string/pattern” file/files
 	
-	 - cat file | grep [options] “string/pattern”
+- cat file | grep [options] “string/pattern”
 	
-	 - echo “some text” | grep [options] “string/pattern”
+- echo “some text” | grep [options] “string/pattern”
 	
 
  **Basic options:** ```-i -w -v -o -n -c -A -B -C -r -l -h```
 
- _grep “string/pattern” file/files_
- 
- _grep [options] “string/pattern” file/files_
  
  ``` -i To ignore case for matching/searching
  
@@ -44,7 +41,7 @@
  
  -l To display only file names
  
- -h To hide file names ```
+ -h To hide file names
  
  
  ```
