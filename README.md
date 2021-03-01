@@ -18,9 +18,9 @@
 
  **Basic options:** ```-i -w -v -o -n -c -A -B -C -r -l -h```
 
- grep “string/pattern” file/files
+ __grep “string/pattern” file/files__
  
- grep [options] “string/pattern” file/files
+ __ grep [options] “string/pattern” file/files __
  
  ``` -i To ignore case for matching/searching
  
@@ -49,7 +49,7 @@
  
  ```
 
-####Advanced grep command:
+#### Advanced grep command:
 
  
  **Advanced Options:** -f -e and –E
