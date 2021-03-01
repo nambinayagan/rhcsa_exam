@@ -117,7 +117,7 @@
 
 
 
-### Cut Command in Linux Cheatsheet
+### Cut Command
 
 CUT command can be differentiated in three ways
 
