@@ -9,26 +9,26 @@
  
  Simple grep command syntax:
  
-	 grep [options] “string/pattern” file/files
+	 - grep [options] “string/pattern” file/files
 	
-	 cat file | grep [options] “string/pattern”
+	 - cat file | grep [options] “string/pattern”
 	
-	 echo “some text” | grep [options] “string/pattern”
+	 - echo “some text” | grep [options] “string/pattern”
 	
 
- Basic options: -i -w -v -o -n -c -A -B -C -r -l -h
+ Basic options: ```-i -w -v -o -n -c -A -B -C -r -l -h```
  
- Advanced Options: -e -f and –E
+ Advanced Options: ```-e -f and –E```
  
 
- Basic options: -i -w -v -o -n -c -A -B -C -r -l -h
+ Basic options: ```-i -w -v -o -n -c -A -B -C -r -l -h```
  
 
  grep “string/pattern” file/files
  
  grep [options] “string/pattern” file/files
  
- -i To ignore case for matching/searching
+ ``` -i To ignore case for matching/searching
  
   -w To match a whole word
   
@@ -50,7 +50,7 @@
  
  -l To display only file names
  
- -h To hide file names
+ -h To hide file names```
  
 
 
