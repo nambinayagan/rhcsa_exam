@@ -49,16 +49,14 @@
  
  **Advanced Options:** -f -e and –E
  
- ```-f Takes search string/pattern from a file, one per line
- 
+ ```
+ -f Takes search string/pattern from a file, one per line
  -e To search multiple strings/patterns 
-  -E To work with patterns
+ -E To work with patterns
  ```
  
  grep -E[options] “pattern” file/files
  
-
-
 **Rules to create patterns:**
 
 	 xy|pq Matches for xy or pq
