@@ -16,13 +16,7 @@
 	 - echo “some text” | grep [options] “string/pattern”
 	
 
- Basic options: ```-i -w -v -o -n -c -A -B -C -r -l -h```
- 
- Advanced Options: ```-e -f and –E```
- 
-
- Basic options: ```-i -w -v -o -n -c -A -B -C -r -l -h ```
- 
+ **Basic options:** ```-i -w -v -o -n -c -A -B -C -r -l -h```
 
  grep “string/pattern” file/files
  
@@ -30,7 +24,7 @@
  
  ``` -i To ignore case for matching/searching
  
-  -w To match a whole word
+ -w To match a whole word
   
  -v To display the lines which are not having given string or text
  
@@ -55,83 +49,79 @@
  
  ```
 
-Advanced grep command:
+####Advanced grep command:
 
- grep command syntax:
  
- grep [options] “string/pattern” file/files
+ **Advanced Options:** -f -e and –E
  
- Basic options: -i -w -v -o -n -c -A -B -C -r -l -h
+ ```-f Takes search string/pattern from a file, one per line
  
- Advanced Options: -f -e and –E
- 
- -f Takes search string/pattern from a file, one per line
- 
- -e To search multiple strings/patterns
+ -e To search multiple strings/patterns 
+ ```
  
  Pattern is a string and it represents more than one string.
  
- -E To work with patterns
- 
+``` -E To work with patterns
+ ```
  
  grep -E[options] “pattern” file/files
  
 
 
-Rules to create patterns:
+**Rules to create patterns:**
 
- xy|pq Matches for xy or pq
- 
- ^xyz Matches for the lines which are starting with “xyz”
- 
- xyz$ Matches for the lines which are ending with “xyz”
- 
- ^$ Matches for the lines which are empty
- 
- \ To remove the special purpose of any symbol. Ex: \^ \$
- 
- . Matches any one character
- 
- \. Matches exactly with .
- 
- \b Match the empty string at the edge of word
- 
- ? The preceding character is optional and will be matched, at most, once.
- 
- * The preceding character will be matched zero or more times
- * 
- + The preceding character will be matched one or more times
- + 
- [xyz] Matches for the lines which are having x or y or z
- 
- [a-d] is equal to [abcd] Matched for the lines which are having a/b/b/d
- 
- [a-ds-z] is eqal to [abcdstuvwxyz]
- 
- ^[abc] Matches for the lines which are starting with a/b/c
- 
- [^abc] Matches for the lines which are not starting with a/b/c
- 
- {N} The preceding string matched exactly N times
- 
- {N,} The preceding string matched N or more times
- 
- {N,M} The preceding string matched at least N times but not more than M times
- 
-[[:alnum:]] – Alphanumeric characters.
+	 xy|pq Matches for xy or pq
 
-[[:alpha:]] – Alphabetic characters
+	 ^xyz Matches for the lines which are starting with “xyz”
 
-[[:blank:]] – Blank characters: space and tab.
+	 xyz$ Matches for the lines which are ending with “xyz”
+
+	 ^$ Matches for the lines which are empty
+
+	 \ To remove the special purpose of any symbol. Ex: \^ \$
+
+	 . Matches any one character
+
+	 \. Matches exactly with .
+
+	 \b Match the empty string at the edge of word
+
+	 ? The preceding character is optional and will be matched, at most, once.
+
+	 * The preceding character will be matched zero or more times
+	 * 
+	 + The preceding character will be matched one or more times
+	 + 
+	 [xyz] Matches for the lines which are having x or y or z
+
+	 [a-d] is equal to [abcd] Matched for the lines which are having a/b/b/d
+
+	 [a-ds-z] is eqal to [abcdstuvwxyz]
+
+	 ^[abc] Matches for the lines which are starting with a/b/c
+
+	 [^abc] Matches for the lines which are not starting with a/b/c
+
+	 {N} The preceding string matched exactly N times
+
+	 {N,} The preceding string matched N or more times
+
+	 {N,M} The preceding string matched at least N times but not more than M times
+
+	[[:alnum:]] – Alphanumeric characters.
+
+	[[:alpha:]] – Alphabetic characters
+
+	[[:blank:]] – Blank characters: space and tab.
 
 
-[[:digit:]] – Digits: ‘0 1 2 3 4 5 6 7 8 9’.
+	[[:digit:]] – Digits: ‘0 1 2 3 4 5 6 7 8 9’.
 
-[[:lower:]] – Lower-case letters: ‘a b c d e f g h i j k l m n o p q r s t u v w x y z’.
+	[[:lower:]] – Lower-case letters: ‘a b c d e f g h i j k l m n o p q r s t u v w x y z’.
 
-[[:space:]] – Space characters: tab, newline, vertical tab, form feed, carriage return, and space.
+	[[:space:]] – Space characters: tab, newline, vertical tab, form feed, carriage return, and space.
 
-[[:upper:]] – Upper-case letters: ‘A B C D E F G H I J K L M N O P Q R S T U V W X Y Z’.
+	[[:upper:]] – Upper-case letters: ‘A B C D E F G H I J K L M N O P Q R S T U V W X Y Z’.
 
 
 
