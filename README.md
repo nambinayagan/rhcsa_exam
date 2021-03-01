@@ -18,9 +18,9 @@
 
  **Basic options:** ```-i -w -v -o -n -c -A -B -C -r -l -h```
 
- __grep “string/pattern” file/files__
+ _grep “string/pattern” file/files_
  
- __ grep [options] “string/pattern” file/files __
+ _grep [options] “string/pattern” file/files_
  
  ``` -i To ignore case for matching/searching
  
