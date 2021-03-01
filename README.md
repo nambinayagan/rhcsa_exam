@@ -21,7 +21,7 @@
  Advanced Options: ```-e -f and –E```
  
 
- Basic options: ```-i -w -v -o -n -c -A -B -C -r -l -h```
+ Basic options: ```-i -w -v -o -n -c -A -B -C -r -l -h ```
  
 
  grep “string/pattern” file/files
@@ -50,9 +50,10 @@
  
  -l To display only file names
  
- -h To hide file names```
+ -h To hide file names ```
  
-
+ 
+ ```
 
 Advanced grep command:
 
