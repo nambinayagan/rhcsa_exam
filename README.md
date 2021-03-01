@@ -1,8 +1,9 @@
 
 # Basic Linux Commands
 
-[Grep Command](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#grep-command)
-[Cut Command](https://github.com/nambinayagan/rhcsa_exam#cut-command-in-linux-cheatsheet "Cut Command")
+[Grep Command](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#grep-command "Grep Command")
+
+[Cut Command](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#cut-command "Cut Command")
 
 ### Grep Command
  Grep is a filter command, it is used to search a string in a given file.
