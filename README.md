@@ -1,7 +1,8 @@
 
 # Basic Linux Commands
 
-[Cut Command in Linux Cheatsheet](https://github.com/nambinayagan/rhcsa_exam#cut-command-in-linux-cheatsheet "Cut Command")
+[Grep Command](https://github.com/nambinayagan/rhcsa_exam/blob/main/README.md#grep-command)
+[Cut Command](https://github.com/nambinayagan/rhcsa_exam#cut-command-in-linux-cheatsheet "Cut Command")
 
 ### Grep Command
  Grep is a filter command, it is used to search a string in a given file.
@@ -113,8 +114,7 @@
 	[[:upper:]] – Upper-case letters: ‘A B C D E F G H I J K L M N O P Q R S T U V W X Y Z’.
 
 
-
-
+___
 
 
 ### Cut Command
