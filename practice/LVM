@@ -14,7 +14,7 @@ Now the disk has been partitioned
 Now create a physical volume for all the partions which needs to be added in volumegroup >> pvcreate <partion name>
 Now create volume group which combines the physical volumes
     If physical extent is default >> vgcreate <vgname> <pvname> . . .
-    If physical extent is defained as X >> vgcreate -s XM <vgname> <pvname> . . .
+    If physical extent is defined as X >> vgcreate -s XM <vgname> <pvname> . . .
 Now create logical volume with required amount of disk space >> lvcreate -L <disk_space> -n <lv_name> <vgname>
                                                                 lvcreate -l <No_of_PE> -n <lv_name> <vgname>                   Here the total size="No_of_PE" x PE
 Now create filesystem in the logical volume before mounting it
@@ -57,7 +57,7 @@ Now if we have to extend a logical volume we first have to check is the required
 For EXT fs:
 
 First unmount the logical volume >> umount /mountpoint
-Perform fsck on the logical volume >> e2fsck <lv_name>
+Perform fsck on the logical volume >> e2fsck -f <lv_name>
 Reduce the size of filesystem to desired space >> resize2fs <lv_name> <disk_space>
 Now reduce the size of logical volume >> lvreduce -L <disk_space> -n <lv_name>
 Now we can do fsck but it is not a compulsary step
