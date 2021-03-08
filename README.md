@@ -172,8 +172,10 @@ _Syntax:_
 
         cut -d ":" -f 1 -s                      #In above cases if any lines which does not have that delimter thn it is by default displayed. However if we used -s then this can be avoided
 
-Using FIND command
+### FIND command
+
 Syntax: find <location> <options>.. <-exec=>
+	
  ==============To list files which are matching criteria=======================
 
 find .          	        #to list all file and directories including subdirectories in current location
