@@ -179,15 +179,25 @@ Syntax: find <location> <options>.. <-exec=>
  ==============To list files which are matching criteria=======================
 
 find .          	        #to list all file and directories including subdirectories in current location
+
 find <location>       		  #to list all files and directories inside the specified directory
+	
 find . -type f		          #to list all files in current location
+
 find . -type d		          #to list all directories and subdirectories in current location
+
 find . -type d -maxdepth 1	  #to list all directories and not the subdirectories
+
 find . -name "nambi"	          #to list all files with exact same name
+
 find . -iname "nambi"	        	#to list all files with exact same name but case insensitive
+
 find . -iname "*nambi*"	        	#to list all files having nambi in their name eg: nambi.txt, rnambi.jpg
+
 find . type -f -user "nambi"		#to list all files onwned by user nambi
+
 fine . -empty				#to list all empty files
+
 
 		According to Time
 
