@@ -177,6 +177,7 @@ _Syntax:_
 Syntax: find <location> <options>.. <-exec=>
 	
  ==============To list files which are matching criteria=======================
+ ```
 
 find .          	        #to list all file and directories including subdirectories in current location
 
@@ -197,7 +198,7 @@ find . -iname "*nambi*"	        	#to list all files having nambi in their name e
 find . type -f -user "nambi"		#to list all files onwned by user nambi
 
 fine . -empty				#to list all empty files
-
+```
 
 		According to Time
 
