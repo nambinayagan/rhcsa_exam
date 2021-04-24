@@ -18,8 +18,8 @@ fine . -empty				#to list all empty files
 find . -type f -mmin -10		#list all files modified in last 10minutes
 find . -type f -mmin +10                #list all files modified in before last 10minutes
 find . -type f -mmin +5 -mmin -10	#list all files which were modified before 5 mins but in last 10mins
-find . -type file -mtime -10		#list all files modified in last 10 days
-find . -type file -mtime +10		#list all files modified before 10 days
+find . -type f -mtime -10		#list all files modified in last 10 days
+find . -type f -mtime +10		#list all files modified before 10 days
 					#mmin >> Modified time in minutes
 					#mtime >> Modified time in days
 					#cmin >> Change time in minutes
